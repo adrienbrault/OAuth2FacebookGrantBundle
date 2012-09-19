@@ -1,0 +1,10 @@
+parameters:
+    fsc_oauth2_facebook_grant.grants.facebook.class: FSC\OAuth2FacebookGrantBundle\OAuth2\FacebookGrantExtension
+
+services:
+    fsc_oauth2_facebook_grant.grants.facebook:
+        class: %fsc_oauth2_facebook_grant.grants.facebook.class%
+        arguments:
+            - null # userProvider
+            - @fsc_oauth2_facebook_grant.facebook
+
