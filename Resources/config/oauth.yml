@@ -6,5 +6,5 @@ services:
         class: %fsc_oauth2_facebook_grant.grants.facebook.class%
         arguments:
             - null # userProvider
-            - @fsc_oauth2_facebook_grant.facebook
+            - @footcho.facebook_client.client
 
