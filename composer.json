@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "require": {
         "friendsofsymfony/oauth-server-bundle": "dev-master",
-        "footcho/facebook-client": "*"
+        "footcho/facebook-client": "dev-master"
     },
     "autoload": {
         "psr-0": { "FSC\\OAuth2FacebookGrantBundle": "" }

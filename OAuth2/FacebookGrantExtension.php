@@ -6,7 +6,7 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use FOS\OAuthServerBundle\Storage\GrantExtensionInterface;
 use OAuth2\Model\IOAuth2Client;
 
-use FSC\OAuth2FacebookGrantBundle\Guzzle\FacebookClient;
+use Footcho\FacebookClient\FacebookClient;
 
 class FacebookGrantExtension implements GrantExtensionInterface
 {
