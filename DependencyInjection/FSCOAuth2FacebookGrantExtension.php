@@ -17,7 +17,7 @@ class FSCOAuth2FacebookGrantExtension extends Extension
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        foreach (array('oauth.yml', 'guzzle.yml') as $resource) {
+        foreach (array('oauth.yml') as $resource) {
             $loader->load($resource);
         }
 
