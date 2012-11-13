@@ -1,0 +1,9 @@
+parameters:
+    fsc_oauth2_facebook_grant.facebook.class: FSC\OAuth2FacebookGrantBundle\Guzzle\FacebookClient
+
+services:
+    fsc_oauth2_facebook_grant.facebook:
+        factory_class: %fsc_oauth2_facebook_grant.facebook.class%
+        factory_method: factory
+        class: %fsc_oauth2_facebook_grant.facebook.class%
+

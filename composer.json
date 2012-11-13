@@ -2,8 +2,8 @@
     "name": "fsc/oauth2-facebook-grant-bundle",
     "type": "symfony-bundle",
     "require": {
-        "friendsofsymfony/oauth-server-bundle": "*",
-        "facebook/php-sdk": "*"
+        "friendsofsymfony/oauth-server-bundle": "dev-master",
+        "guzzle/guzzle": "3.*"
     },
     "autoload": {
         "psr-0": { "FSC\\OAuth2FacebookGrantBundle": "" }

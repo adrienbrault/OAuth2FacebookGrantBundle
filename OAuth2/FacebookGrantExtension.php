@@ -6,7 +6,7 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use FOS\OAuthServerBundle\Storage\GrantExtensionInterface;
 use OAuth2\Model\IOAuth2Client;
 
-use FSC\OAuth2FacebookGrantBundle\Facebook\Facebook;
+use FSC\OAuth2FacebookGrantBundle\Guzzle\FacebookClient;
 
 class FacebookGrantExtension implements GrantExtensionInterface
 {
@@ -16,14 +16,14 @@ class FacebookGrantExtension implements GrantExtensionInterface
     protected $userProvider;
 
     /**
-     * @var Facebook
+     * @var FacebookClient
      */
-    protected $facebook;
+    protected $facebookClient;
 
-    public function __construct(UserProviderInterface $userProvider, Facebook $facebook)
+    public function __construct(UserProviderInterface $userProvider, FacebookClient $facebook)
     {
         $this->userProvider = $userProvider;
-        $this->facebook = $facebook;
+        $this->facebookClient = $facebook;
     }
 
     public function checkGrantExtension(IOAuth2Client $client, array $inputData, array $authHeaders)
@@ -32,11 +32,11 @@ class FacebookGrantExtension implements GrantExtensionInterface
             return false;
         }
 
-        $this->facebook->setAccessToken($inputData['facebook_access_token']);
-
         try {
-            $fbData = $this->facebook->api('/me');
-        } catch (\FacebookApiException $e) {
+            $fbData = $this->facebookClient->get('/me', array(
+                'Authorization' => sprintf('OAuth %s', $inputData['facebook_access_token']),
+            ))->send()->json();
+        } catch (\Exception $e) {
             return false;
         }
 

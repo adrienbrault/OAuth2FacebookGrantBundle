@@ -1,6 +1,0 @@
-services:
-    fsc_oauth2_facebook_grant.facebook:
-        class: FSC\OAuth2FacebookGrantBundle\Facebook\Facebook
-        arguments:
-            - { appId: null, secret: null }
-
