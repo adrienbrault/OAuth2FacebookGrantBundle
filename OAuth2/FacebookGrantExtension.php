@@ -2,6 +2,7 @@
 
 namespace FSC\OAuth2FacebookGrantBundle\OAuth2;
 
+use FSC\OAuth2FacebookGrantBundle\Model\FacebookGrantedUserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use FOS\OAuthServerBundle\Storage\GrantExtensionInterface;
 use OAuth2\Model\IOAuth2Client;
@@ -47,6 +48,10 @@ class FacebookGrantExtension implements GrantExtensionInterface
         $user = $this->userProvider->loadUserByUsername($fbData['id']);
         if (null === $user) {
             return false;
+        }
+
+        if ($user instanceof FacebookGrantedUserInterface) {
+            $user->setFacebookAccessToken($inputData['facebook_access_token']);
         }
 
         return array(
