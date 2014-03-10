@@ -9,7 +9,7 @@ For example: you have an iOS app that needs a token to authenticate a user again
 
 Add the bundle to your AppKernel
 
-```
+```php
 class AppKernel extends Kernel
     public function registerBundles()
         {
@@ -20,7 +20,7 @@ class AppKernel extends Kernel
 
 Configure the bundle:
 
-```
+```php
 fsc_oauth2_facebook_grant:
     user_provider: bundle.facebook_user_provider
     uri: "http://grants.yourapi.com/facebook_access_token"
@@ -28,7 +28,7 @@ fsc_oauth2_facebook_grant:
 
 And implement your `bundle.facebook_user_provider` like this:
 
-```
+```php
 <?php
 
 namespace FSC\Core\UserBundle\Security;
@@ -88,7 +88,7 @@ Parameters:
 
 Example
 
-```
+```bash
 $ curl -XGET "http://youapi/oauth/v2/token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&grant_type=http%3A%2F%2Fgrants.yourapi.com%2Ffacebook_access_token&facebook_access_token=A_VALID_FACEBOOK_ACCESS_TOKEN"
 {
     "access_token": "krXC75SKp--cISB_fqHA4aSsviyDVJwuutiWgaM",
