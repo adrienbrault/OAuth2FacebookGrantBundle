@@ -2,11 +2,16 @@
     "name": "fsc/oauth2-facebook-grant-bundle",
     "type": "symfony-bundle",
     "require": {
-        "friendsofsymfony/oauth-server-bundle": "dev-master",
-        "footcho/facebook-client": "dev-master"
+        "friendsofsymfony/oauth-server-bundle": "~1.4",
+        "footcho/facebook-client": "0.1.*"
     },
     "autoload": {
         "psr-0": { "FSC\\OAuth2FacebookGrantBundle": "" }
     },
-    "target-dir": "FSC/OAuth2FacebookGrantBundle"
+    "target-dir": "FSC/OAuth2FacebookGrantBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.0-dev"
+        }
+    }
 }
