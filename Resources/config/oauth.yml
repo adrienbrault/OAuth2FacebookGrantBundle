@@ -1,10 +1,9 @@
 parameters:
-    fsc_oauth2_facebook_grant.grants.facebook.class: FSC\OAuth2FacebookGrantBundle\OAuth2\FacebookGrantExtension
+    ab_oauth2_facebook_grant.grants.facebook.class: AdrienBrault\OAuth2FacebookGrantBundle\OAuth2\FacebookGrantExtension
 
 services:
-    fsc_oauth2_facebook_grant.grants.facebook:
-        class: %fsc_oauth2_facebook_grant.grants.facebook.class%
+    ab_oauth2_facebook_grant.grants.facebook:
+        class: %ab_oauth2_facebook_grant.grants.facebook.class%
         arguments:
             - null # userProvider
-            - @footcho.facebook_client.client
-
+            - @ab_facebook_client.client

@@ -1,17 +1,22 @@
 {
-    "name": "fsc/oauth2-facebook-grant-bundle",
+    "name": "adrienbrault/oauth2-facebook-grant-bundle",
     "type": "symfony-bundle",
     "require": {
         "friendsofsymfony/oauth-server-bundle": "~1.4",
-        "footcho/facebook-client": "0.1.*"
+        "adrienbrault/facebook-client": "0.1.*"
+    },
+    "require-dev": {
+        "symfony/symfony": "~2.1",
+        "phpunit/phpunit": "~3.7"
     },
     "autoload": {
-        "psr-0": { "FSC\\OAuth2FacebookGrantBundle": "" }
+        "psr-0": { "AdrienBrault\\OAuth2FacebookGrantBundle": "" }
     },
-    "target-dir": "FSC/OAuth2FacebookGrantBundle",
+    "target-dir": "AdrienBrault/OAuth2FacebookGrantBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "0.1.x-dev"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

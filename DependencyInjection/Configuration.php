@@ -1,6 +1,6 @@
 <?php
 
-namespace FSC\OAuth2FacebookGrantBundle\DependencyInjection;
+namespace AdrienBrault\OAuth2FacebookGrantBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -10,7 +10,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('fsc_oauth2_facebook_grant');
+        $rootNode = $treeBuilder->root('ab_oauth2_facebook_grant');
 
         $rootNode
             ->children()

@@ -15,13 +15,13 @@ class AppKernel extends Kernel
         {
             $bundles = array(
                 ...
-                new FSC\OAuth2FacebookGrantBundle\FSCOAuth2FacebookGrantBundle(),
+                new AdrienBrault\OAuth2FacebookGrantBundle\ABOAuth2FacebookGrantBundle(),
 ```
 
 Configure the bundle:
 
 ```php
-fsc_oauth2_facebook_grant:
+ab_oauth2_facebook_grant:
     user_provider: bundle.facebook_user_provider
     uri: "http://grants.yourapi.com/facebook_access_token"
 ```
@@ -31,7 +31,7 @@ And implement your `bundle.facebook_user_provider` like this:
 ```php
 <?php
 
-namespace FSC\Core\UserBundle\Security;
+namespace AdrienBrault\Core\UserBundle\Security;
 
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

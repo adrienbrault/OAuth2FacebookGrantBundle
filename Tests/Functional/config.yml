@@ -1,0 +1,15 @@
+framework:
+    secret: test
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+    form: ~
+    validation: ~
+    csrf_protection: false
+
+ab_oauth2_facebook_grant:
+    user_provider: bundle.facebook_user_provider
+    uri: "http://grants.yourapi.com/facebook_access_token"
+
+services:
+    bundle.facebook_user_provider:
+        class: AdrienBrault\OAuth2FacebookGrantBundle\Tests\Functional\UserProvider

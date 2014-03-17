@@ -1,13 +1,13 @@
 <?php
 
-namespace FSC\OAuth2FacebookGrantBundle\OAuth2;
+namespace AdrienBrault\OAuth2FacebookGrantBundle\OAuth2;
 
-use FSC\OAuth2FacebookGrantBundle\Model\FacebookGrantedUserInterface;
+use AdrienBrault\OAuth2FacebookGrantBundle\Model\FacebookGrantedUserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use FOS\OAuthServerBundle\Storage\GrantExtensionInterface;
 use OAuth2\Model\IOAuth2Client;
 
-use Footcho\FacebookClient\FacebookClient;
+use AdrienBrault\FacebookClient\FacebookClient;
 
 class FacebookGrantExtension implements GrantExtensionInterface
 {

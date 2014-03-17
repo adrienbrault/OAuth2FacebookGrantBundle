@@ -1,6 +1,6 @@
 <?php
 
-namespace FSC\OAuth2FacebookGrantBundle\Model;
+namespace AdrienBrault\OAuth2FacebookGrantBundle\Model;
 
 interface FacebookGrantedUserInterface
 {
